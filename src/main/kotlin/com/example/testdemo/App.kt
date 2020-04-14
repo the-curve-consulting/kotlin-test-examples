@@ -3,13 +3,12 @@
  */
 package com.example.testdemo
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello world."
-        }
-}
+import java.time.LocalDateTime
+import java.util.*
 
 fun main(args: Array<String>) {
-    println(App().greeting)
+    val db = Database();
+    val blog = Blog(db);
+
+    val post = Post("My post", LocalDateTime.now())
 }
